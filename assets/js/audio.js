@@ -11,7 +11,7 @@ export function playTune() {
   });
 }
 
-// 🛑 Stops the background tune
+//  Stops the background tune
 export function stopTune() {
   const tune = document.getElementById("tune");
   if (tune) {
@@ -20,7 +20,7 @@ export function stopTune() {
   }
 }
 
-// 🔊 Plays a named sound effect
+// 🔊 Plays a named sound effect on event
 export function playSound(name) {
   const sounds = {
     click: "assets/audio/card.mp3",
