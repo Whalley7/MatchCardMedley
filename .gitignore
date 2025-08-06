@@ -1,0 +1,40 @@
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === VS Code ===
+.vscode/
+.history/
+*.code-workspace
+
+# === macOS ===
+.DS_Store
+
+# === Environment Files ===
+.env
+.env.local
+.env.*.local
+
+# === Build Output ===
+dist/
+build/
+coverage/
+temp/
+
+# === System Files ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Logs ===
+logs/
+*.log
+
+# === Git Backup ===
+*.orig
+
+# === Licenses (optional if you don’t want any hanging about) ===
+LICENSE
+LICENSE.*
