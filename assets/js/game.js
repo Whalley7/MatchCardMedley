@@ -336,6 +336,7 @@ export class CardGame {
         const current = scores[userNameForDisplay]?.[this.level] ?? 0;
         this.levelTextTag.textContent = `High score for ${this.level}: ${current}`;
     }
+    
 
     launchConfetti() {
         if (typeof confetti === 'function') {
