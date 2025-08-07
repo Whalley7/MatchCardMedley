@@ -1,4 +1,4 @@
-Here is a README.md file you can use for your Match Card Medley game.
+
 
 Match Card Medley
 Match Card Medley is a classic memory game where players must find pairs of matching cards. This project is built using HTML, CSS, JavaScript, and Bootstrap to provide a responsive and interactive user experience.
