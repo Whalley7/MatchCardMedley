@@ -208,6 +208,8 @@ transition: background 0.5s ease-in-out; /* Add transition for background change
 }
 
 
+
+
 @media (max-width: 768px) {
   .card-container {
     width: 90px;

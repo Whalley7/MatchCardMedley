@@ -239,6 +239,8 @@ export class CardGame {
         this.matchCards(this.cardOne.dataset.image, this.cardTwo.dataset.image);
     }
 
+    
+
     matchCards(img1, img2) {
         if (img1 === img2) {
             playSound('ding');
@@ -251,14 +253,21 @@ export class CardGame {
             this.matchTag.textContent = this.matchedPairs;
             this.updateLiveScore();
             if (this.matchedPairs === this.totalPairs) this.checkGameEnd();
-        } else {
-            setTimeout(() => {
-                if (this.cardOne) this.cardOne.querySelector(".card-inner").classList.remove("flip");
-                if (this.cardTwo) this.cardTwo.querySelector(".card-inner").classList.remove("flip");
-                this.cardOne = null;
-                this.cardTwo = null;
-                this.disableDeck = false;
-            }, 1000);
+   } else {
+    setTimeout(() => {
+        if (this.cardOne) {
+            this.cardOne.querySelector(".card-inner").classList.remove("flip");
+            this.cardOne.style.pointerEvents = 'auto'; // ADD THIS LINE
+        }
+        if (this.cardTwo) {
+            this.cardTwo.querySelector(".card-inner").classList.remove("flip");
+            this.cardTwo.style.pointerEvents = 'auto'; // ADD THIS LINE
+        }
+        this.cardOne = null;
+        this.cardTwo = null;
+        this.disableDeck = false;
+    }, 1000);
+}
         }
     }
 
@@ -336,7 +345,7 @@ export class CardGame {
         const current = scores[userNameForDisplay]?.[this.level] ?? 0;
         this.levelTextTag.textContent = `High score for ${this.level}: ${current}`;
     }
-    
+
 
     launchConfetti() {
         if (typeof confetti === 'function') {
