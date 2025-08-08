@@ -253,7 +253,7 @@ export class CardGame {
             this.matchTag.textContent = this.matchedPairs;
             this.updateLiveScore();
             if (this.matchedPairs === this.totalPairs) this.checkGameEnd();
-   } else {
+    } else {
     setTimeout(() => {
         if (this.cardOne) {
             this.cardOne.querySelector(".card-inner").classList.remove("flip");
@@ -268,9 +268,10 @@ export class CardGame {
         this.disableDeck = false;
     }, 1000);
 }
-        }
+
     }
 
+   
    checkGameEnd() {
     this.stopTimer();
     this.updateLiveScore(); // This updates this.newScore to the final score
