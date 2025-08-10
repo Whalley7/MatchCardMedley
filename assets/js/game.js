@@ -273,25 +273,26 @@ export class CardGame {
     }
 
    
-   checkGameEnd() {
-    this.stopTimer();
-    this.updateLiveScore(); // This updates this.newScore to the final score
-    this.launchConfetti();
+checkGameEnd() {
+    this.stopTimer();
+    this.updateLiveScore(); // This updates this.newScore to the final score
+    this.launchConfetti();
 
-    // This retrieves the stored high score for the current level and username
-    const oldScore = updateStoredScores(this.username, this.level, this.newScore);
+    // This retrieves the stored high score for the current level and username
+    const oldScore = updateStoredScores(this.username, this.level, this.newScore);
 ;
-    if (this.newScore > oldScore) {
-        playSound('applause');
-        // This is where the magic happens for displaying the score
-        showWinModal(this.username, this.level, this.newScore);
-        displayUserScore();
-    } else {
-        playSound('wrong_answer');
-        // This is where the magic happens for displaying the score
-        showLossModal(this.username, this.level, this.newScore, oldScore);
-    }
-    this.disableDeck = true;
+    if (this.newScore > oldScore) {
+        playSound('applause');
+        // This is where the magic happens for displaying the score
+        showWinModal(this.username, this.level, this.newScore);
+        this.displayUserScore(); // ✅ ADD THIS LINE
+       
+    } else {
+        playSound('wrong_answer');
+        // This is where the magic happens for displaying the score
+        showLossModal(this.username, this.level, this.newScore, oldScore);
+    }
+    this.disableDeck = true;
 }
     shuffleDeck() {
     this.flips = 0;
