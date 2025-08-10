@@ -285,7 +285,7 @@ export class CardGame {
         playSound('applause');
         // This is where the magic happens for displaying the score
         showWinModal(this.username, this.level, this.newScore);
-
+        displayUserScore();
     } else {
         playSound('wrong_answer');
         // This is where the magic happens for displaying the score
