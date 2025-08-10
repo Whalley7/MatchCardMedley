@@ -253,6 +253,7 @@ export class CardGame {
             this.matchTag.textContent = this.matchedPairs;
             this.updateLiveScore();
             if (this.matchedPairs === this.totalPairs) this.checkGameEnd();
+            return;
     } else {
     setTimeout(() => {
         if (this.cardOne) {
@@ -290,8 +291,6 @@ export class CardGame {
         // This is where the magic happens for displaying the score
         showLossModal(this.username, this.level, this.newScore, oldScore);
     }
-
-     this.levelTextTag.textContent = `Score for this game ${this.level}: ${current}`;
     this.disableDeck = true;
 }
     shuffleDeck() {
